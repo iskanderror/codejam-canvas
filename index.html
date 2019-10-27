@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>codejam-canvas</title>
+</head>
+<body>
+  <header>
+    <div class="menu_button">
+      <input id="hamburger_menu" class="menu_button--toggle" type="checkbox">
+      <label class="menu_button--label" for="hamburger_menu"> <span class="material_icons noselect">menu</span></label>
+    </div>
+    <h1 class="header_title">CodeJam-Palette</h1>
+    <div class="menu_button">
+      <input id="kebab_menu" class="menu_button--toggle" type="checkbox">
+      <label class="menu_button--label" for="kebab_menu"> <span class="material_icons noselect">more_vert</span></label>
+    </div>
+  </header>
+  <main>
+    <canvas id="canvas" width="512px" height="512px"></canvas>
+    <form id="image_selector" class="floating_panel">
+      <fieldset class='floating_panel--block'>
+        <legend class="noselect">Image source:</legend>
+        <div class="menu_item">
+          <input type="radio" id="image_4x4" class="floating_panel--input" name="canvas_image" value="4x4">
+          <label for="image_4x4" class="menu_label noselect">image 4x4</label>
+        </div> 
+        <div class="menu_item">
+          <input type="radio" id="image_32x32" class="floating_panel--input" name="canvas_image" value="32x32">
+          <label for="image_32x32" class="menu_label noselect">image 32x32</label>
+        </div>
+        <div class="menu_item">
+          <input type="radio" id="image_png" class="floating_panel--input" name="canvas_image" value="png">
+          <label for="image_png" class="menu_label noselect">png image</label>
+        </div>
+      </fieldset>
+    </form>
+    <div class="tools_panel" id="tools_panel">
+      <ul class="tools_panel--block">
+        <li class="tools_panel--item menu_item"> 
+          <img src="./icons/paint-bucket.svg" alt="paint-bucket" class="menu_icon" height="30px" width="30px">
+          <p class="menu_label noselect">Paint bucket</p>
+        </li>
+        <li class="tools_panel--item menu_item"> 
+          <img src="./icons/color-picker.svg" alt="color-picker" class="menu_icon" height="30px" width="30px"> 
+          <p class="menu_label noselect">Choose color</p> 
+        </li>
+      </ul>
+      <ul class="tools_panel--block">
+        <li class="tools_panel--item menu_item"> 
+          <img src="./icons/move.svg" alt="move" class="menu_icon" height="30px" width="30px"> 
+          <p class="menu_label noselect">Move</p> 
+        </li>
+        <li class="tools_panel--item menu_item"> 
+          <img src="./icons/transform.svg" alt="transform" class="menu_icon" height="30px" width="30px"> 
+          <p class="menu_label noselect">Transform</p> 
+        </li>
+      </ul>
+    </div>
+    <div class="tools_panel" id="color_panel">
+      <ul class="tools_panel--block">
+        <li class="tools_panel--item menu_item"> 
+          <div class="menu_icon color_sample" id="color_current"></div>
+          <p class="menu_label noselect">Current color</p>
+        </li>
+        <li class="tools_panel--item menu_item"> 
+          <div class="menu_icon color_sample" id="color_previous"></div>
+          <p class="menu_label noselect">Prev color</p> 
+        </li>
+      </ul>
+      <ul class="tools_panel--block">
+        <li class="tools_panel--item menu_item"> 
+          <div class="menu_icon color_sample" id="color_red"></div>
+          <p class="menu_label noselect">red</p> 
+        </li>
+        <li class="tools_panel--item menu_item"> 
+          <div class="menu_icon color_sample" id="color_blue"></div>
+          <p class="menu_label noselect">blue</p> 
+        </li>
+      </ul>
+    </div>
+  </main>
+  <script src="canvas.js"></script>
+</body>
+</html>
