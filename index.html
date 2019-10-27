@@ -22,8 +22,24 @@
   </header>
   <main>
     <canvas id="canvas" width="512px" height="512px"></canvas>
+    <form id="image_selector" class="floating_panel">
+      <fieldset class='floating_panel--block'>
+        <legend>Image source:</legend>
+        <div class="floating_panel--item">
+          <input type="radio" id="image_4x4" class="floating_panel--input" name="canvas_image" value="4x4">
+          <label for="image_4x4" class="floating_panel--label noselect">image 4x4</label>
+        </div> 
+        <div class="floating_panel--item">
+          <input type="radio" id="image_32x32" class="floating_panel--input" name="canvas_image" value="32x32">
+          <label for="image_32x32" class="floating_panel--label noselect">image 32x32</label>
+        </div>
+        <div class="floating_panel--item">
+          <input type="radio" id="image_png" class="floating_panel--input" name="canvas_image" value="png">
+          <label for="image_png" class="floating_panel--label noselect">png image</label>
+        </div>
+      </fieldset>
+    </form>
   </main>
-  <input type="button" onclick="drawImage()" value="draw Image">
   <script src="canvas.js"></script>
 </body>
 </html>

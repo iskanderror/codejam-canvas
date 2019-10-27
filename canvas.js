@@ -49,8 +49,19 @@ const colorMatrix_32x32 = normalizeAlpha(colorMatrix_32x32_Raw);
 
 const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');
+function clearCanvas(){
+  // Store the current transformation matrix
+  context.save();
+  // Use the identity matrix while clearing the canvas
+  context.setTransform(1, 0, 0, 1, 0, 0);
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  // Restore the transform
+  context.restore();
+}
+
 
 function drawColorMatrix (colorMatrix) {
+  clearCanvas();
   let imageWidth = colorMatrix[0].length;
   let imageHeigh = colorMatrix.length;
   let scaleX = Math.floor(canvas.clientWidth/imageWidth);
@@ -64,14 +75,31 @@ function drawColorMatrix (colorMatrix) {
   }
 }
 
-function drawImage() {
+function drawImage(source) {
   var img = new Image();
   img.onload = function() {
+    clearCanvas();
     context.drawImage(img, 0, 0,canvas.clientWidth , canvas.clientHeight);
-    console.log('OK');
   };
-  img.src = "./data/image.png";
+  img.src = source;
 }
 
-drawColorMatrix(colorMatrix_32x32);
+var source_4x4 = document.querySelector('#image_4x4');
+source_4x4.addEventListener('change', function(){
+  drawColorMatrix(colorMatrix_4x4);
+});
 
+var source_32x32 = document.querySelector('#image_32x32');
+source_32x32.addEventListener('change', function(){
+  drawColorMatrix(colorMatrix_32x32);
+});
+
+var source_png = document.querySelector('#image_png');
+source_png.addEventListener('change', function(){
+  drawImage("./data/image.png");
+});
+
+window.onload = function(){
+  source_4x4.checked=true;
+  drawColorMatrix(colorMatrix_4x4);
+};

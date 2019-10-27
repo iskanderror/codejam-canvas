@@ -9,7 +9,7 @@ body {
   min-width: 512px;
   max-width: 1440px;
   margin: 0 auto;
-  font-family: 'Roboto','Helvetica','Arial',sans-serif!important;
+  font-family: 'Roboto','Helvetica','Arial',sans-serif;
   background-color: #eeeeee;
 }
 
@@ -19,6 +19,8 @@ h1{
 }
 
 header {
+  position: relative;
+  z-index: 255;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -60,61 +62,53 @@ header {
 }
 
 .menu_button--label:hover {
-  background-color: lightgrey;
+  background-color: #cccccc;
 }
 
 main {
   background-color: #ffffff;
   position: relative;
+  text-align: center;
 }
 
 canvas {
-  background-color: lightgrey;
+  background-color: #cccccc;
 }
 
+fieldset {
+  border: 1px solid #cccccc;
+  padding: 10px;
+}
 
+input {
+  cursor: pointer;
+}
 
+label {
+  cursor: pointer;
+}
 
+#image_selector {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 200px;
+}
 
+.floating_panel--block {
+  display: flex;
+}
 
+.floating_panel--item {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
 
+.floating_panel--item:hover{
+  background-color: #cccccc;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.floating_panel--label {
+  padding-left: 5px;
+}
