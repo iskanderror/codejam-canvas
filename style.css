@@ -1,0 +1,116 @@
+*, ::after, ::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: 'Roboto','Helvetica','Arial',sans-serif!important;
+  background-color: #eeeeee;
+}
+
+h1{
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #ffffff;
+  border: 1px solid #9e9e9e;
+  box-shadow: 0 5px 10px 0 #9e9e9e;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.header_title {
+  flex: 1;
+}
+
+.menu_button--toggle {
+  display: none;
+}
+
+.material_icons {
+  margin: 0 0.5em 0;
+  padding: 0.1em;
+  font-family: 'Material Icons';
+  color: #9e9e9e;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+.menu_button--label {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.menu_button--label:hover {
+  background-color: lightgrey;
+}
+
+main {
+  background-color: #ffffff;
+  position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
